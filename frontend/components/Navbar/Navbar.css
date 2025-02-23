@@ -1,0 +1,119 @@
+.navbar{
+    padding: 20px 0px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.navbar .logo{
+    height: 80px;
+    margin-right: 4rem;
+}
+
+.navbar-menu{
+    display: flex;
+    list-style: none;
+    gap:30px;
+    color: #ff5c9f;
+    font-size: 20px;
+    font-family: "Sedgwick Ave Display";
+    
+}
+
+
+.navbar-right{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.navbar button{
+    background: transparent;
+    font-size: 16px;
+    color: #000000;
+    border:1px solid #ff5c9f;
+    padding: 8px 20px;
+    font-family: "Sedgwick Ave Display";
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.navbar button:hover{
+    background-color: #ff5c9f;
+    border:1px solid #000000;
+    
+}.navbar .active{
+    padding-bottom: 2px;
+    border-bottom: 2.5px solid #000000;
+    transition: 0.3s;
+}
+
+.navbar li{
+    cursor: pointer;
+} 
+.navbar  .cart_icon{
+    height: 35px;
+}
+.navbar-search-icon{
+    position: relative;
+}
+.navbar .search_icon{
+    height: 35px;
+    margin-bottom: 5px;
+}
+.navbar-search-icon .dot{
+    position: absolute;
+    min-width: 10px;
+    min-height: 10px;
+    background-color:#ff5c9f;
+    border-radius: 5px;
+    top: -2px;
+    right: -5px;
+}
+
+@media (max-width:1050px){
+    .navbar .logo{
+        width: 140px;
+        }
+    .navbar-menu{
+        gap: 20px;
+        font-size: 18px;
+    }
+    .navbar-right{
+        gap: 30px;
+    }
+    .navbar-right img{
+        width: 22px;
+    }
+    .navbar-right button{
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+}
+
+@media (max-width:900px){
+    .navbar .logo{
+        width: 120px;
+        }
+    .navbar-menu{
+        gap: 15px;
+        font-size: 16px;
+    }
+    .navbar-right{
+        gap: 20px;
+    }
+    .navbar-right img{
+        width: 20px;
+    }
+    .navbar-right button{
+        font-size: 14px;
+        padding: 7px 20px;
+    }
+}
+
+@media (max-width:750px){
+    
+    .navbar-menu{
+      display: none;
+    }
+    
+}

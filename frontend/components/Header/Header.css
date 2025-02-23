@@ -1,0 +1,174 @@
+.Header {
+    height: 34vw;
+    margin: 30px auto;
+    background-image: url('/header.jpg');
+    background-size: contain;
+    position: relative;
+    border-radius: 50px ;
+    animation: fadeIn 1s;
+}
+
+.header-contents{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1.2vw;
+    max-width: 50%;
+    bottom: 10%;
+    left: 6vw;
+    animation: fadeIn 2s;
+}
+
+.header-contents h2{
+    margin-bottom: 4px;
+    color:  rgb(255, 255, 255);
+    font-size: max(4.5vw,22px);
+    font-family: "Sedgwick Ave Display";
+    -webkit-text-stroke: 1px rgb(255, 0, 0);
+}
+
+.header-contents .p-div{
+    color: #ff0000;
+    font-size:1.2vw;
+    -webkit-text-stroke: 1px rgb(255, 255, 255);
+}
+
+.header-span{
+  font-family: "Sedgwick Ave Display";
+    color: #ffffff;
+    font-size:1.3vw;
+    -webkit-text-stroke: 1px rgb(255, 0, 0);
+    border-radius: 3px;
+}
+.header-button,
+.header-button::after {
+  padding: 16px 20px;
+  font-size: 18px;
+  background: linear-gradient(45deg, transparent 5%, #000000 5%);
+  border: 0;
+  color: #fff;
+  letter-spacing: 3px;
+  line-height: 1;
+  box-shadow: 6px 0px 0px #ff2200;
+  outline: transparent;
+  position: relative;
+}
+
+.header-button::after {
+  --slice-0: inset(50% 50% 50% 50%);
+  --slice-1: inset(80% -6px 0 0);
+  --slice-2: inset(50% -6px 30% 0);
+  --slice-3: inset(10% -6px 85% 0);
+  --slice-4: inset(40% -6px 43% 0);
+  --slice-5: inset(80% -6px 5% 0);
+  content: "SHOP NOW";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    45deg,
+    transparent 3%,
+    #00ffb1 3%,
+    #ece9e9 5%,
+    #000000 5%
+  );
+  text-shadow: -3px -3px 0px #ff0000, 3px 3px 0px #00f621;
+  clip-path: var(--slice-0);
+}
+
+.header-button:hover::after {
+  animation: 1s glitch;
+  animation-timing-function: steps(2, end);
+  padding: 15px 18px;
+  box-shadow: 4px 0px 0px #ff2200;
+}
+
+@keyframes glitch {
+  0% {
+    clip-path: var(--slice-1);
+    transform: translate(-20px, -10px);
+  }
+
+  10% {
+    clip-path: var(--slice-3);
+    transform: translate(10px, 10px);
+  }
+
+  20% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 10px);
+  }
+
+  30% {
+    clip-path: var(--slice-3);
+    transform: translate(0px, 5px);
+  }
+
+  40% {
+    clip-path: var(--slice-2);
+    transform: translate(-5px, 0px);
+  }
+
+  50% {
+    clip-path: var(--slice-3);
+    transform: translate(5px, 0px);
+  }
+
+  60% {
+    clip-path: var(--slice-4);
+    transform: translate(5px, 10px);
+  }
+
+  70% {
+    clip-path: var(--slice-2);
+    transform: translate(-10px, 10px);
+  }
+
+  80% {
+    clip-path: var(--slice-5);
+    transform: translate(20px, -10px);
+  }
+
+  90% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 0px);
+  }
+
+  100% {
+    clip-path: var(--slice-1);
+    transform: translate(0);
+  }
+}
+.header-button:hover {
+  box-shadow: 15px #ff0000;
+}
+
+@media(max-width:1050px){
+  .header{
+    height:38vw ;
+  }
+
+  .header-contents{
+    max-width: 45%;
+  }
+}
+
+@media(max-width:750px){
+
+  .header-contents{
+    max-width: 55%;
+  }
+  .header-contents p{
+    display: none;
+  }
+  .header-contents h2{
+    font-size: 5vw;
+  }
+  .header-button{
+    padding: 2vw 4vw;
+  }
+}

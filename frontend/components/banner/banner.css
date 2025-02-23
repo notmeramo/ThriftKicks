@@ -1,0 +1,110 @@
+.banner-container h1 {
+    color: white;
+    text-align: center;
+    font-family: cursive;
+    text-transform: uppercase;
+}
+.banner-container span{
+    color: white;
+    text-align: center;
+    font-family: cursive;
+    text-transform: uppercase;
+    font-size: small;
+}
+.banner-container{
+    background-color: black;
+    height: 10%;
+    width: 100%;
+    margin-top: 100px;
+}
+/* From Uiverse.io by janisar-hyder */ 
+.stack-container {
+    display: flex;
+    justify-content: center; /* Center align the cards */
+    gap: 20px; /* Space between the cards */
+    flex-wrap: wrap; /* Ensures responsiveness */
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+}
+
+.image img {
+    display: block;
+    width: 100%;
+}
+
+.stack {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 70%;
+    max-width: 400px;
+    transition: 0.25s ease;
+}
+
+.stack:hover {
+    transform: rotate(5deg);
+}
+
+.stack:hover .card:before {
+    transform: translateY(-2%) rotate(-4deg);
+}
+
+.stack:hover .card:after {
+    transform: translateY(2%) rotate(4deg);
+}
+
+.card {
+    aspect-ratio: 3 / 2;
+    width: 300px; /* Adjust card size */
+    border: 3px solid;
+    background-color: #fff;
+    position: relative;
+    transition: 0.15s ease;
+    cursor: pointer;
+    padding: 3% 3% 10% 3%;
+    margin-top: 100px;
+}
+
+.card:before,
+.card:after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border: 3px solid;
+    background-color: #fff;
+    transform-origin: center center;
+    z-index: -1;
+    transition: 0.15s ease;
+    top: 0;
+    left: 0;
+}
+
+.card:before {
+    transform: translateY(-2%) rotate(-6deg);
+}
+
+.card:after {
+    transform: translateY(2%) rotate(6deg);
+}
+
+.image {
+    width: 100%;
+    border: 3px solid;
+    background-color: #eee;
+    aspect-ratio: 1 / 1;
+    position: relative;
+}
+
+.browser-warning {
+    margin-bottom: 2rem;
+}
+
+@supports (aspect-ratio: 1 / 1) {
+    .browser-warning {
+        display: none;
+    }
+}
+

@@ -1,0 +1,19 @@
+.banner-container h1 {
+    color: white;
+    text-align: center;
+    font-family: cursive;
+    text-transform: uppercase;
+}
+.banner-container span{
+    color: white;
+    text-align: center;
+    font-family: cursive;
+    text-transform: uppercase;
+    font-size: small;
+}
+.banner-container{
+    background-color: black;
+    height: 10%;
+    width: 100%;
+    margin-top: 100px;
+}
